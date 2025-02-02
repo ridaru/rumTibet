@@ -1,0 +1,79 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+
+    @include mobile {
+        align-items: start;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 20px;
+
+        @include tablet {
+            scroll-snap-type: x mandatory;
+            overflow-x: scroll;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        border-radius: var(--border-radius-card-large);
+        min-width: 285px;
+        
+
+        @include tablet {
+            scroll-snap-align: start;
+        }
+    }
+
+    .popular__item:hover .overlay,.popular__item:focus .overlay {
+        top: 0
+    }
+
+    &__image {
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+
+        @include tablet {
+            min-width: 285px;
+            min-height: 400px;
+        }
+    }
+
+    &__rating {
+        @include flex-center;
+
+        position: absolute;
+        right: 0;
+        top: 50px;
+        border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+        width: 65px;
+        height: 32px;
+        font-family: var(--font-family-base);
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--color-green);
+        background: rgba(253, 253, 253, .4);
+        backdrop-filter: blur(4px);
+
+        &-image {
+            margin-right: 7px;
+            transform: translateY(-2px);
+        }
+    }
+
+    &__button {
+        @include mobile {
+            align-self: center;
+        }
+    }
+    
+}

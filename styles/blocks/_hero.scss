@@ -1,0 +1,28 @@
+.hero {
+    height: 100vh;
+    padding-block: 88px 82px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include tablet {
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        font-family: var(--font-family-accent);
+        letter-spacing: 0.014em;
+        color: var(--color-light);
+        max-width: 1080px;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+
+            @include tablet {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}

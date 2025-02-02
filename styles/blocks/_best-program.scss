@@ -1,0 +1,108 @@
+.best-program {
+    background-color: var(--color-light-alt);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    &__main {
+        max-width: 580px;
+    }
+
+    &__main, &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__description {
+        @include fluid-text(18, 16);
+
+        line-height: 150%;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 66px;
+        line-height: 120%;
+
+        @include desktop-above {
+            max-height: 64px;
+        }
+
+        &::before {
+            content: url('../../images/icons/shield.svg');
+            background-color: #E3E6EE;
+            border-radius: var(--border-radius-small);
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            padding: 7px;
+            top: 0;
+            left: 0;
+
+            @include desktop-above {
+                top: 7px;
+                left: 0;
+            }
+        }
+
+        &:first-child::before {
+            content: url('../../images/icons/people.svg');
+            background-color: #E5EEEB;
+        }
+
+        &:last-child::before {
+            content: url('../../images/icons/tag.svg');
+            background-color: #F3F1E1;
+        }
+    }
+
+    &__item-title {
+        font-size: 18px;
+    }
+
+    &__item-description {
+        font-size: 14px;
+    }
+
+    &__button {
+        align-self: start;
+
+        @include mobile {
+            align-self: center;
+        }
+    }
+
+    &__content {
+        max-height: 510px;
+        flex-shrink: 0;
+
+        @include tablet {
+            max-height: 100vh;
+            margin: 0 auto;
+            grid-template-columns: 150px;
+        }
+
+        @include mobile {
+            @include visually-hidden;
+        }
+    }
+
+    &__image {
+        &:nth-child(1), &:nth-child(4) {
+            border-radius: 0 var(--border-radius-card-huge) 0 var(--border-radius-card-huge);
+        }
+
+        &:nth-child(2), &:nth-child(3)  {
+            border-radius: var(--border-radius-card-huge) 0 var(--border-radius-card-huge) 0;
+        }
+
+        @include tablet {
+            max-height: 150px;
+        }
+    }
+}

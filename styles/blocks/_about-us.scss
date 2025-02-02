@@ -1,0 +1,42 @@
+.about-us {
+    padding-block: 100px;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 30px;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: 40px;
+        }
+    }
+
+    &__main {
+        max-width: 580px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        @include tablet {
+            order: -1;
+            row-gap: 24px;
+        }
+    }
+
+    &__description {
+        @include fluid-text(18, 16);
+
+        line-height: 150%;
+    }
+
+
+    &__button {
+        align-self: start;
+
+        @include tablet {
+            align-self: center;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.header {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 16px;
+
+    @include mobile {
+        padding-top: 20px;
+    }
+
+    &__logo {
+        @include mobile-s {
+        
+            max-width: 84px;
+
+            // тут хезе как сделать не сужается по высоте почему то
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 49px;
+        
+        @include desktop {
+            column-gap: 25px;
+        }
+    }
+
+    &__menu {
+        margin-left: auto;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.07px;
+        color: var(--color-light);
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 24px;
+
+            @include tablet {
+                column-gap: 20px;
+            }
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            height: 48px;
+
+            @include hover {
+                color: var(--color-yellow);
+            }
+        }
+    }
+}

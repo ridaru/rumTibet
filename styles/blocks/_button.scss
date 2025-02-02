@@ -1,0 +1,28 @@
+.button {
+    @include reset-button;
+    @include flex-center;
+
+    height: var(--input-button-height);
+    padding: 16px 36px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    color: var(--color-light);
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+    border-radius: var(--border-radius-small);
+
+    &:hover {
+        color: var(--color-green);
+        background-color: var(--color-light);
+    }
+
+    &--small {
+        --input-button-height: 44px;
+        padding: 12px 24px;
+        font-weight: 600;
+
+    }
+}

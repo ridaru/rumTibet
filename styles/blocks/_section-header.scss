@@ -1,0 +1,19 @@
+.section-header {
+    transform: translateY(-6px);
+    margin-bottom: -9px;
+
+    &__subtitle {
+        @include fluid-text(24, 16);
+
+        display: inline-block;
+        color: var(--color-yellow);
+    }
+
+    &--center {
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+        }
+    }
+}

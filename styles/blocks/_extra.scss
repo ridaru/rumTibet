@@ -1,0 +1,27 @@
+.extra {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-weight: 600;
+    font-size: 14px;
+
+    &__wrapper {
+        padding-block: 24px;
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__privacy-polite-link {
+        text-decoration: underline;
+
+        &:hover {
+            color: var(--color-yellow);
+            text-decoration: none;
+        }
+    }
+}

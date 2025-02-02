@@ -1,0 +1,75 @@
+.footer {
+    padding-top: 178px;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-size: 14px;
+    padding-bottom: 75px;  //72
+    font-weight: 400;
+
+    @include desktop {
+        padding-block: 80px;
+    }
+
+    @include mobile {
+        padding-block: 50px 80px;
+    }
+
+    &__body {
+        display: flex;
+        column-gap: 45px;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 50px;
+        }
+    }
+
+    &__company {
+        max-width: 456px;
+        width: 100%;
+
+        @include desktop {
+            max-width: 358px;
+        }
+    }
+
+    &__aside {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        column-gap: 20px;
+        max-width: 645px;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 50px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600; 
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        margin-bottom: 80px;
+        line-height: 1.4;
+
+        @include desktop {
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        column-gap: 24px;
+        margin-bottom: 30px;
+        text-decoration: underline;
+    }
+
+}

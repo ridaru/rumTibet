@@ -1,0 +1,30 @@
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    padding-inline: var(--container-padding-x);
+    margin-inline: auto;
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.hidden-tablet {
+    @include tablet {
+        display: none !important;
+    }
+}
+
+.visible-tablet {
+    @include tablet-above {
+        display: none !important;
+    }
+}
+
+.hide-scrollbar {
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+    
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+  }
