@@ -45,7 +45,7 @@
         background-color: transparent;
         border: var(--border);
         border-radius: var(--border-radius);
-        background: url('../../images/icons/arrow-bottom.svg') no-repeat right 16px center;
+        background: url('../images/icons/arrow-bottom.svg') no-repeat right 16px center;
     
         &:hover {
             border-color: var(--color-green);
@@ -61,7 +61,7 @@
     }
 
     &__input {
-        background: url('../../images/icons/calendar.svg') no-repeat right 16px center;
+        background: url('../images/icons/calendar.svg') no-repeat right 16px center;
 
         &::placeholder {
             color: currentColor;

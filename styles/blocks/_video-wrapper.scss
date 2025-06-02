@@ -50,7 +50,7 @@
             content: '';
             width: 14px;
             height: 15px;
-            background: url(../../images/play-button.svg);
+            background: url("../images/play-button.svg");
         }
 
         @include hover {

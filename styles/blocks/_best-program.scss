@@ -34,7 +34,7 @@
         }
 
         &::before {
-            content: url('../../images/icons/shield.svg');
+            content: url('../images/icons/shield.svg');
             background-color: #E3E6EE;
             border-radius: var(--border-radius-small);
             position: absolute;
@@ -51,12 +51,12 @@
         }
 
         &:first-child::before {
-            content: url('../../images/icons/people.svg');
+            content: url('../images/icons/people.svg');
             background-color: #E5EEEB;
         }
 
         &:last-child::before {
-            content: url('../../images/icons/tag.svg');
+            content: url('../images/icons/tag.svg');
             background-color: #F3F1E1;
         }
     }
